@@ -1,10 +1,10 @@
 body {
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 28px;
-  letter-spacing: 0em;
   text-align: center;
 }
 
