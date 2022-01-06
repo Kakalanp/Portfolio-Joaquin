@@ -5,6 +5,7 @@ body {
   font-weight: 400;
   line-height: 28px;
   text-align: center;
+  color: #172b4d;
 }
 
 header {
@@ -15,4 +16,41 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.headline {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 95vh;
+}
+
+.headline > * {
+  flex: 1;
+}
+
+.hi {
+  margin: auto;
+}
+
+h1 {
+  align-self: center;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0%;
+}
+
+.enphasis {
+  color: #36b37e;
+}
+
+.paragraph {
+}
+
+.network {
+  display: flex;
+}
+
+.social {
+  flex: 1;
 }
