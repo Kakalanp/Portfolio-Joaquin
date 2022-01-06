@@ -19,14 +19,14 @@ header {
   justify-content: space-between;
 }
 
-.headline {
+.landing-page {
   display: flex;
   align-items: stretch;
   flex-direction: column;
   height: 95vh;
 }
 
-.headline > * {
+.landing-page > * {
   flex: 1;
 }
 
