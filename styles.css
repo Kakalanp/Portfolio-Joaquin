@@ -26,8 +26,10 @@ a {
   align-items: stretch;
   flex-direction: column;
   height: 95vh;
-  margin: 20px;
-  padding: 20px;
+  margin: 0%;
+  padding: 40px;
+  background: url("/Images/header-illsutration-mobile.svg");
+  background-size: 100% 100%;
 }
 
 .landing-page > * {
@@ -53,14 +55,4 @@ h1 {
 .social {
   flex: 1;
   list-style: none;
-}
-
-.background {
-  position: absolute;
-  background: url("/Images/header-illsutration-mobile.svg");
-  display: block;
-  text-indent: -9999px;
-  width: 100%;
-  height: 100vh;
-  background-size: 100% 100%;
 }
