@@ -1,0 +1,58 @@
+body {
+  margin: 0%;
+  font-family: Inter, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  text-align: center;
+  color: #172b4d;
+}
+
+a {
+  text-decoration: none;
+  color: #172b4d;
+}
+
+.flexnav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.landing-page {
+  display: flex;
+  align-items: stretch;
+  flex-direction: column;
+  height: 95vh;
+  margin: 0%;
+  padding: 40px;
+  background: url("/Images/header-illsutration-mobile.svg");
+  background-size: 100% 100%;
+}
+
+.landing-page > * {
+  flex: 1;
+}
+
+h1 {
+  align-self: center;
+  font-size: 40px;
+  line-height: 52px;
+  margin: 0%;
+}
+
+.enphasis {
+  color: #36b37f;
+}
+
+.network {
+  display: flex;
+  padding: 20%;
+}
+
+.social {
+  flex: 1;
+  list-style: none;
+}
