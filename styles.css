@@ -57,7 +57,7 @@ h1 {
 
 .background {
   position: absolute;
-  background: "url(/Images/header-illsutration-mobile.svg)";
+  background: url"(/Images/header-illsutration-mobile.svg)";
   display: block;
   text-indent: -9999px;
   width: 100%;
