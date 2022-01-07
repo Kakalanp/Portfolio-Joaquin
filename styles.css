@@ -14,11 +14,22 @@ a {
   color: #172b4d;
 }
 
+li {
+  list-style: none;
+}
+
 .flexnav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 20px;
+  margin: 0% 20px;
+}
+
+@supports (display: grid) {
+  .main {
+    display: grid;
+    grid-column: 1;
+  }
 }
 
 .landing-page {
@@ -27,13 +38,14 @@ a {
   flex-direction: column;
   height: 95vh;
   margin: 0%;
-  padding: 40px;
+  padding: 10%;
   background: url("/Images/header-illsutration-mobile.svg");
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% auto;
 }
 
 .landing-page > * {
-  flex: 1;
+  flex: 3;
 }
 
 h1 {
@@ -49,10 +61,94 @@ h1 {
 
 .network {
   display: flex;
-  padding: 20%;
+  padding: 20% 20% 0%;
+  margin-bottom: 0%;
 }
 
 .social {
   flex: 1;
-  list-style: none;
+}
+
+.works {
+  padding: 0% 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: #ebf0ee;
+  border-radius: 5px;
+  border-color: #d0d9d4;
+  border: 1px solid;
+  margin: 15% 5%;
+}
+
+.screenshot {
+  min-height: 120px;
+  max-width: 100%;
+}
+
+.info {
+  background-color: white;
+  border-radius: 5px;
+  padding-bottom: 30px;
+}
+
+.languages {
+  display: flex;
+  justify-content: center;
+  padding: 0% 5%;
+  margin-bottom: 15%;
+  flex-wrap: wrap;
+}
+
+.languages > * {
+  background-color: #ebf0ee;
+  margin: 5px;
+  padding: 3px 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.button {
+  color: white;
+  background-color: #36b37f;
+  padding: 15px;
+  border-radius: 5px;
+  margin: 90% 0%;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
+.aboutme {
+  background: url("/Images/background-aboutme-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  padding: 10%;
+}
+
+.aboutme p {
+  margin: 30px;
+}
+
+.tags {
+  display: flex;
+  justify-content: center;
+  padding: 0% 5%;
+  flex-wrap: wrap;
+}
+
+.tags > * {
+  background-color: white;
+  border-radius: 8px;
+  color: #36b37f;
+  padding: 12px;
+  font-size: 12px;
+  line-height: 16px;
+  margin: 5px;
+  font-weight: 600;
 }
