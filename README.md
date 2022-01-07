@@ -4,7 +4,7 @@
 
 > This is my portfolio, following Microverse indications for this project.
 
-I used the perset, example, number three from the figma list we were given.
+I used the perset number three from the figma list we were given.
 
 ## Built With
 
