@@ -71,8 +71,13 @@ h1 {
 
 .works {
   padding: 0% 10%;
-  display: flex;
-  flex-direction: column;
+}
+
+@supports (display: grid) {
+  .works {
+    display: grid;
+    grid-column: 1;
+  }
 }
 
 .card {
@@ -117,6 +122,14 @@ h1 {
   padding: 15px;
   border-radius: 5px;
   margin: 90% 0%;
+}
+
+.button:hover {
+  box-shadow: 0 8px 16px 0 #36b37f3d;
+}
+
+.button:active {
+  background: #008552;
 }
 
 .about {
