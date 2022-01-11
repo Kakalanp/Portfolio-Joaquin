@@ -48,6 +48,16 @@ li {
   background-size: 100% auto;
 }
 
+form > * {
+  margin: 3%;
+  padding: 4%;
+  border: 1px solid #d0d9d4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  max-height: 90px;
+  width: 100%;
+}
+
 .landing-page > * {
   flex: 3;
 }
@@ -131,7 +141,7 @@ textarea {
   padding: 15px;
   border-radius: 5px;
   font-weight: 500;
-  max-width: fit-content;
+  width: fit-content;
   font-size: 20px;
 }
 
@@ -191,17 +201,7 @@ form {
   align-items: center;
 }
 
-form > * {
-  margin: 3%;
-  padding: 4%;
-  border: 1px solid #D0D9D4;
-  box-sizing: border-box;
-  border-radius: 4px;
-  max-height: 90px;
-  width: 100%;
-}
-
 .email {
-  color:#42526E;
+  color: #42526e;
   padding-top: 10%;
 }
