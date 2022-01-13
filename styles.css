@@ -218,10 +218,10 @@ form {
   padding-top: 10%;
 }
 
-@media (min-width: 922px) {
+@media (min-width: 992px) {
   .flexnav {
     justify-content: space-around;
-    padding: 0% 30%;
+    padding: 5% 30%;
     font-size: 15px;
     font-weight: 600;
     line-height: 20px;
