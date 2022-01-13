@@ -26,14 +26,11 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0% 20px;
+  padding: 0% 20px;
 }
 
-@supports (display: grid) {
-  .main {
-    display: grid;
-    grid-column: 1;
-  }
+.desktop {
+  display: none;
 }
 
 .landing-page {
@@ -71,7 +68,6 @@ h1 {
 
 textarea {
   width: 100%;
-  max-height: 100%;
 }
 
 .enphasis {
@@ -89,13 +85,14 @@ textarea {
 }
 
 .works {
-  padding: 0% 8%;
+  padding: 0% 8% 5%;
 }
 
 @supports (display: grid) {
   .works {
     display: grid;
-    grid-column: 1;
+    grid-template-columns: 100%;
+    justify-content: center;
   }
 }
 
@@ -124,6 +121,7 @@ textarea {
   padding: 0% 5%;
   margin-bottom: 15%;
   flex-wrap: wrap;
+  min-height: 96px;
 }
 
 .languages > * {
@@ -133,6 +131,7 @@ textarea {
   border-radius: 5px;
   font-size: 12px;
   line-height: 16px;
+  max-height: 16px;
 }
 
 .button {
@@ -141,8 +140,13 @@ textarea {
   padding: 15px;
   border-radius: 5px;
   font-weight: 500;
-  width: fit-content;
   font-size: 20px;
+}
+
+@supports (width: fit-content) {
+  .button {
+    width: fit-content;
+  }
 }
 
 .button:hover {
@@ -153,12 +157,12 @@ textarea {
   background: #008552;
 }
 
-.about {
+#about {
   display: flex;
   flex-direction: column;
 }
 
-.about ul {
+.skills {
   padding: 8%;
 }
 
@@ -191,7 +195,15 @@ textarea {
   font-weight: 600;
 }
 
-.form {
+@supports (display: grid) {
+  #form {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+}
+
+#form {
   padding: 8%;
 }
 
@@ -204,4 +216,88 @@ form {
 .email {
   color: #42526e;
   padding-top: 10%;
+}
+
+@media (min-width: 922px) {
+  .flexnav {
+    justify-content: space-around;
+    padding: 0% 30%;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  .welcome {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  .main {
+    background: url("/Images/Header-llustration-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .landing-page {
+    background: transparent;
+    max-height: 42vh;
+    padding: 8% 16% 40%;
+  }
+
+  .network {
+    padding: 0% 30%;
+  }
+
+  .works .works {
+    padding: 0%;
+  }
+
+  @supports (display: grid) {
+    .works .works {
+      grid-template-columns: 33% 33% 33%;
+    }
+  }
+
+  .aboutme {
+    background: url("/Images/illustration-about-me-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+  }
+
+  @supports (display: grid) {
+    .skills {
+      display: grid;
+      grid-template-columns: 31% 31% 31%;
+      justify-content: center;
+    }
+  }
+
+  #form {
+    justify-content: space-around;
+    align-items: center;
+    background: url("/Images/illustration-form-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+  }
+
+  @supports (display: grid) {
+    #form {
+      grid-template-columns: 40% 50%;
+    }
+  }
+
+  .email {
+    display: none;
+  }
 }
