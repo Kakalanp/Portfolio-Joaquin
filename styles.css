@@ -250,7 +250,7 @@ form {
   .landing-page {
     background: transparent;
     max-height: 42vh;
-    padding: 8% 16% 40%;
+    padding: 8% 16%;
   }
 
   .network {
@@ -272,6 +272,7 @@ form {
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
+    padding: 4% 8%;
   }
 
   @supports (display: grid) {
@@ -280,6 +281,10 @@ form {
       grid-template-columns: 31% 31% 31%;
       justify-content: center;
     }
+  }
+
+  .skills {
+    padding: 4% 8%;
   }
 
   #form {
