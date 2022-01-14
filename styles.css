@@ -40,14 +40,14 @@ li {
   height: 95vh;
   margin: 0%;
   padding: 8%;
-  background: url("/Images/header-illsutration-mobile.svg");
+  background: url("./images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
 form > * {
-  margin: 3%;
-  padding: 4%;
+  margin: 10px 0%;
+  padding: 12px;
   border: 1px solid #d0d9d4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -66,18 +66,13 @@ h1 {
   margin: 0%;
 }
 
-textarea {
-  width: 100%;
-}
-
 .enphasis {
   color: #36b37f;
 }
 
 .network {
   display: flex;
-  padding: 20% 30% 0%;
-  margin-bottom: 0%;
+  padding: 0%;
 }
 
 .social {
@@ -97,31 +92,38 @@ textarea {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: #ebf0ee;
   border-radius: 5px;
   border-color: #d0d9d4;
   border: 1px solid;
-  margin: 15% 5%;
+  margin: 10px;
 }
 
 .screenshot {
   min-height: 120px;
   max-width: 100%;
+  flex-grow: 0;
 }
 
 .info {
   background-color: white;
   border-radius: 5px;
-  padding-bottom: 30px;
+  padding: 16px 16px 30px;
+  flex-grow: 1;
+}
+
+.text {
+  margin: 0%;
 }
 
 .languages {
   display: flex;
   justify-content: center;
-  padding: 0% 5%;
+  padding: 0%;
   margin-bottom: 15%;
   flex-wrap: wrap;
-  min-height: 96px;
 }
 
 .languages > * {
@@ -166,11 +168,15 @@ textarea {
   padding: 8%;
 }
 
+ul .card {
+  padding: 7px;
+}
+
 .aboutme {
-  background: url("/Images/background-aboutme-mobile.svg");
+  background: url("./images/background-aboutme-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  padding: 8%;
+  padding: 25px;
 }
 
 .aboutme p {
@@ -180,7 +186,6 @@ textarea {
 .tags {
   display: flex;
   justify-content: center;
-  padding: 0% 5%;
   flex-wrap: wrap;
 }
 
@@ -204,7 +209,7 @@ textarea {
 }
 
 #form {
-  padding: 8%;
+  padding: 0% 80px;
 }
 
 form {
@@ -242,7 +247,7 @@ form {
   }
 
   .main {
-    background: url("/Images/Header-llustration-desktop.svg");
+    background: url("./images/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -254,7 +259,13 @@ form {
   }
 
   .network {
-    padding: 0% 30%;
+    padding: 0%;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  .social {
+    flex: 0;
   }
 
   .works .works {
@@ -268,11 +279,11 @@ form {
   }
 
   .aboutme {
-    background: url("/Images/illustration-about-me-desktop.svg");
+    background: url("./Images/illustration-about-me-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
-    padding: 4% 8%;
+    padding: 0% 80px;
   }
 
   @supports (display: grid) {
@@ -290,7 +301,7 @@ form {
   #form {
     justify-content: space-around;
     align-items: center;
-    background: url("/Images/illustration-form-desktop.svg");
+    background: url("./images/illustration-form-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
@@ -300,6 +311,10 @@ form {
     #form {
       grid-template-columns: 40% 50%;
     }
+  }
+
+  form .button {
+    align-self: flex-start;
   }
 
   .email {
