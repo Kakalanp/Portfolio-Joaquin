@@ -26,14 +26,11 @@ li {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 0% 20px;
+  padding: 0% 20px;
 }
 
-@supports (display: grid) {
-  .main {
-    display: grid;
-    grid-column: 1;
-  }
+.desktop {
+  display: none;
 }
 
 .landing-page {
@@ -43,14 +40,14 @@ li {
   height: 95vh;
   margin: 0%;
   padding: 8%;
-  background: url("/Images/header-illsutration-mobile.svg");
+  background: url("./images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
 
 form > * {
-  margin: 3%;
-  padding: 4%;
+  margin: 10px 0%;
+  padding: 12px;
   border: 1px solid #d0d9d4;
   box-sizing: border-box;
   border-radius: 4px;
@@ -69,19 +66,13 @@ h1 {
   margin: 0%;
 }
 
-textarea {
-  width: 100%;
-  max-height: 100%;
-}
-
 .enphasis {
   color: #36b37f;
 }
 
 .network {
   display: flex;
-  padding: 20% 30% 0%;
-  margin-bottom: 0%;
+  padding: 0%;
 }
 
 .social {
@@ -89,39 +80,48 @@ textarea {
 }
 
 .works {
-  padding: 0% 8%;
+  padding: 0% 8% 5%;
 }
 
 @supports (display: grid) {
   .works {
     display: grid;
-    grid-column: 1;
+    grid-template-columns: 100%;
+    justify-content: center;
   }
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   background-color: #ebf0ee;
   border-radius: 5px;
   border-color: #d0d9d4;
   border: 1px solid;
-  margin: 15% 5%;
+  margin: 10px;
 }
 
 .screenshot {
   min-height: 120px;
   max-width: 100%;
+  flex-grow: 0;
 }
 
 .info {
   background-color: white;
   border-radius: 5px;
-  padding-bottom: 30px;
+  padding: 16px 16px 30px;
+  flex-grow: 1;
+}
+
+.text {
+  margin: 0%;
 }
 
 .languages {
   display: flex;
   justify-content: center;
-  padding: 0% 5%;
+  padding: 0%;
   margin-bottom: 15%;
   flex-wrap: wrap;
 }
@@ -133,6 +133,7 @@ textarea {
   border-radius: 5px;
   font-size: 12px;
   line-height: 16px;
+  max-height: 16px;
 }
 
 .button {
@@ -141,8 +142,13 @@ textarea {
   padding: 15px;
   border-radius: 5px;
   font-weight: 500;
-  width: fit-content;
   font-size: 20px;
+}
+
+@supports (width: fit-content) {
+  .button {
+    width: fit-content;
+  }
 }
 
 .button:hover {
@@ -153,20 +159,24 @@ textarea {
   background: #008552;
 }
 
-.about {
+#about {
   display: flex;
   flex-direction: column;
 }
 
-.about ul {
+.skills {
   padding: 8%;
 }
 
+ul .card {
+  padding: 7px;
+}
+
 .aboutme {
-  background: url("/Images/background-aboutme-mobile.svg");
+  background: url("./images/background-aboutme-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  padding: 8%;
+  padding: 25px;
 }
 
 .aboutme p {
@@ -176,7 +186,6 @@ textarea {
 .tags {
   display: flex;
   justify-content: center;
-  padding: 0% 5%;
   flex-wrap: wrap;
 }
 
@@ -191,8 +200,16 @@ textarea {
   font-weight: 600;
 }
 
-.form {
-  padding: 8%;
+@supports (display: grid) {
+  #form {
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+  }
+}
+
+#form {
+  padding: 0% 80px;
 }
 
 form {
@@ -204,4 +221,103 @@ form {
 .email {
   color: #42526e;
   padding-top: 10%;
+}
+
+@media (min-width: 992px) {
+  .flexnav {
+    justify-content: space-around;
+    padding: 5% 30%;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0%;
+    text-align: center;
+  }
+
+  .welcome {
+    display: none;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .desktop {
+    display: flex;
+  }
+
+  .main {
+    background: url("./images/Header-llustration-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+  }
+
+  .landing-page {
+    background: transparent;
+    max-height: 42vh;
+    padding: 8% 16%;
+  }
+
+  .network {
+    padding: 0%;
+    justify-content: center;
+    column-gap: 20px;
+  }
+
+  .social {
+    flex: 0;
+  }
+
+  .works .works {
+    padding: 0%;
+  }
+
+  @supports (display: grid) {
+    .works .works {
+      grid-template-columns: 33% 33% 33%;
+    }
+  }
+
+  .aboutme {
+    background: url("./Images/illustration-about-me-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+    padding: 0% 80px;
+  }
+
+  @supports (display: grid) {
+    .skills {
+      display: grid;
+      grid-template-columns: 31% 31% 31%;
+      justify-content: center;
+    }
+  }
+
+  .skills {
+    padding: 4% 8%;
+  }
+
+  #form {
+    justify-content: space-around;
+    align-items: center;
+    background: url("./images/illustration-form-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: bottom;
+  }
+
+  @supports (display: grid) {
+    #form {
+      grid-template-columns: 40% 50%;
+    }
+  }
+
+  form .button {
+    align-self: flex-start;
+  }
+
+  .email {
+    display: none;
+  }
 }
