@@ -10,6 +10,10 @@ I used the perset number three from the figma list we were given.
 
 - HTML
 - CSS
+- Github, as the version control system
+
+## Live Demo
+[here](https://kakalanp.github.io/Portfolio-Joaquin/)
 
 ## Authors
 
