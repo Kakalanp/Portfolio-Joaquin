@@ -40,7 +40,7 @@ li {
   height: 95vh;
   margin: 0%;
   padding: 8%;
-  background-image: url("images/header-illsutration-mobile.svg");
+  background-image: url("Images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -173,7 +173,7 @@ ul .card {
 }
 
 .aboutme {
-  background-image: url("images/background-aboutme-mobile.svg");
+  background-image: url("Images/background-aboutme-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 25px;
@@ -247,7 +247,7 @@ form {
   }
 
   .main {
-    background-image: url("images/Header-llustration-desktop.svg");
+    background-image: url("Images/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -301,7 +301,7 @@ form {
   #form {
     justify-content: space-around;
     align-items: center;
-    background-image: url("images/illustration-form-desktop.svg");
+    background-image: url("Images/illustration-form-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
