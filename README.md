@@ -13,7 +13,7 @@ I used the perset number three from the figma list we were given.
 - Github, as the version control system
 
 ## Live Demo
-here
+[here](https://kakalanp.github.io/Portfolio-Joaquin/)
 
 ## Authors
 
