@@ -37,7 +37,6 @@ li {
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  height: 95vh;
   margin: 0%;
   padding: 8%;
   background-image: url("Images/header-illsutration-mobile.svg");
