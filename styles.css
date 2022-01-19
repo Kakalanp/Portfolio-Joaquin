@@ -37,7 +37,6 @@ li {
   display: flex;
   align-items: stretch;
   flex-direction: column;
-  height: 95vh;
   margin: 0%;
   padding: 8%;
   background-image: url("Images/header-illsutration-mobile.svg");
@@ -138,7 +137,7 @@ h1 {
 
 .button {
   color: white;
-  background-color: #36b37f;
+  background-color: #00875a;
   padding: 15px;
   border-radius: 5px;
   font-weight: 500;
@@ -156,7 +155,7 @@ h1 {
 }
 
 .button:active {
-  background: #008552;
+  background-color: #008552;
 }
 
 #about {
