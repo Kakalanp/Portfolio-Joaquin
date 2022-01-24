@@ -9,6 +9,42 @@ body {
   color: #172b4d;
 }
 
+nav .menu-container {
+  display: flex;
+  justify-content: space-around;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  gap: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  nav .menu-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    top: 0;
+    left: 0;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 40px;
+    justify-content: left;
+    font-size: 5vw;
+  }
+
+  .closeButton {
+    background-image: url("Images/close.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 12px;
+    height: 12px;
+  }
+}
+
 a {
   text-decoration: none;
   color: #172b4d;
