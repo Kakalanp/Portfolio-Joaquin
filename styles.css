@@ -23,7 +23,7 @@ nav .menu-container {
 @media screen and (max-width: 991px) {
   nav .menu-container {
     position: fixed;
-    width: 100%;
+    width: calc(100% - 30px);
     height: 100%;
     background-color: white;
     top: 0;
@@ -31,17 +31,18 @@ nav .menu-container {
     display: none;
     flex-direction: column;
     align-items: flex-start;
-    padding-left: 40px;
+    padding: 20px 10px 20px 20px;
     justify-content: left;
     font-size: 5vw;
   }
 
-  .closeButton {
-    background-image: url("Images/close.png");
+  .close-button {
+    background-image: url("Images/close.svg");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 12px;
-    height: 12px;
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
   }
 }
 
