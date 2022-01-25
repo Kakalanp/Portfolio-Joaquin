@@ -269,6 +269,79 @@ form {
   padding-top: 10%;
 }
 
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 20px;
+  background-color: rgba(192, 192, 192, 0.9);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 15px;
+  background-color: white;
+  max-width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.popup img {
+  max-height: 430px;
+}
+
+.popup h2 {
+}
+
+.popup a {
+  position: fixed;
+  background-image: url('Images/close.svg');
+  height: 40px;
+  width: 40px;
+  align-self: end;
+}
+
+.popup  .flexrow {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popup ul {
+  margin: 0;
+}
+
+.popup a.see-project-button {
+  background-image: url('Images/seeproject-icon.png');
+  background-repeat: no-repeat;
+  align-self: center;
+  width: calc(50% - 29px);
+  height: fit-content;
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position-y: center;
+  background-position-x: right;
+  position: static;
+  order: 3;
+}
+
+.popup a.see-source-button {
+  background-image: url('Images/github-icon.png');
+  background-repeat: no-repeat;
+  align-self: center;
+  width: calc(50% - 29px);
+  height: fit-content;
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position-y: center;
+  background-position-x: right;
+  position: static;
+  order: 4;
+}
+
+
 @media (min-width: 992px) {
   .flexnav {
     justify-content: space-around;
@@ -366,73 +439,72 @@ form {
   .email {
     display: none;
   }
-}
 
-.popup-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% - 40px);
-  height: 100%;
-  padding: 20px;
-  background-color: silver;
-}
-
-.popup {
-  display: flex;
-  flex-direction: column;
-  padding: 15px 15px;
-  background-color: white;
-  max-width: fit-content;
-  border-radius: 5px;
-  margin: auto;
-}
-
-.popup img {
-  max-height: 430px;
-}
-
-.popup h2 {
-}
-
-.popup a {
-  background-image: url('Images/close.svg');
-  height: 40px;
-  width: 40px;
-  align-self: end;
-}
-
-.popup .flexcolumn {
-  max-width: 50%;
-}
-.popup .flexrow {
-  justify-content: center;
-}
-
-.popup ul {
-  margin: 0;
-}
-
-.popup a.see-project-button {
-  background-image: url('Images/seeproject-icon.png');
-  background-repeat: no-repeat;
-  align-self: center;
-  width: 130px;
-  height: fit-content;
-  padding: 15px 20px 15px 5px;
-  margin: 2px;
-  background-position-y: center;
-  background-position-x: right;
-}
-
-.popup a.see-source-button {
-  background-image: url('Images/github-icon.png');
-  background-repeat: no-repeat;
-  align-self: center;
-  width: 130px;
-  height: fit-content;
-  padding: 15px 20px 15px 5px;
-  margin: 2px;
-  background-position-y: center;
-  background-position-x: right;
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 20px;
+    background-color: rgba(192, 192, 192, 0.9);
+  }
+  
+  .popup {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 15px;
+    background-color: white;
+    max-width: fit-content;
+    border-radius: 5px;
+    margin: auto;
+  }
+  
+  .popup img {
+    max-height: 430px;
+  }
+  
+  .popup h2 {
+  }
+  
+  .popup a {
+    position: static !important;
+  }
+  
+  .popup .flexcolumn {
+    max-width: 50%;
+  }
+  .popup .flexrow {
+    justify-content: center;
+  }
+  
+  .popup ul {
+    margin: 0;
+  }
+  
+  .popup a.see-project-button {
+    background-image: url('Images/seeproject-icon.png');
+    background-repeat: no-repeat;
+    align-self: center;
+    width: 130px;
+    height: fit-content;
+    padding: 15px 20px 15px 5px;
+    margin: 2px;
+    background-position-y: center;
+    background-position-x: right;
+    order: 0;
+  }
+  
+  .popup a.see-source-button {
+    background-image: url('Images/github-icon.png');
+    background-repeat: no-repeat;
+    align-self: center;
+    width: 130px;
+    height: fit-content;
+    padding: 15px 20px 15px 5px;
+    margin: 2px;
+    background-position-y: center;
+    background-position-x: right;
+    order: 0;
+  }
 }

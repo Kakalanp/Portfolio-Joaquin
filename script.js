@@ -39,7 +39,7 @@ buttonArr.map((el) => {
     popupObj.img = '/Images/ProjectPopup.svg';
     popupObj.title = 'Keeping track of hundreds of components';
     popupObj.tags = ['HTML', 'CSS', 'JavaScript', 'Ruby on rails'];
-    popupObj.paragraph = 'lorem ipsum dolor sit amet, consectetur adipiscing';
+    popupObj.paragraph = 'lorem ipsum dolor sit amet, consectetur adipiscing ';
 
     const closeButton = document.createElement('a');
     closeButton.addEventListener('click', () =>{
@@ -87,9 +87,9 @@ buttonArr.map((el) => {
     info.appendChild(txtinfo);
     info.appendChild(seeProjectButton);
     info.appendChild(seeSourceButton);
+    info.appendChild(paragraph);
 
     popup.appendChild(info);
-    popup.appendChild(paragraph);
 
     document.querySelector('body').appendChild(popupContainer);
   });
