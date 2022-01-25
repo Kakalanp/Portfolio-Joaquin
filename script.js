@@ -20,3 +20,34 @@ document.querySelector('.menu').addEventListener('click', () => {
     closeButton.remove();
   });
 });
+
+const button = document.querySelectorAll('.card .button')
+
+const buttonArr = Array.from(button);
+
+buttonArr.map((el) => {
+  el.addEventListener('click', () => {
+    const popup =  document.createElement('div');
+    const popupObj = {};
+    popupObj.img = '/Images/ProjectPopup.svg';
+    popupObj.title = 'Keeping track of hundreds of components';
+    popupObj.tags = ['HTML','CSS','JavaScript','Ruby on rails'];
+    popupObj.paragraph = 'lorem ipsum'
+
+    const img = document.createElement('img');
+    img.setAttribute('src', popupObj.img);
+    const title = document.createElement('h2');
+    title.innerHTML = popupObj.title;
+    const tags = document.createElement('ul')
+    popupObj.tags.map((t) => {
+      const tag = document.createElement('li');
+      tag.innerHTML = t;
+      tags.appendChild(tag);
+    })
+
+    popup.appendChild(img);
+    popup.appendChild(title);
+    popup.appendChild(tags);
+    console.log(popup);
+  })
+})
