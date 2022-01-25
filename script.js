@@ -39,13 +39,32 @@ buttonArr.map((el) => {
     popupObj.img = '/Images/ProjectPopup.svg';
     popupObj.title = 'Keeping track of hundreds of components';
     popupObj.tags = ['HTML', 'CSS', 'JavaScript', 'Ruby on rails'];
-    popupObj.paragraph = 'lorem ipsum';
+    popupObj.paragraph = 'lorem ipsum dolor sit amet, consectetur adipiscing';
 
-    const closeButton = document.createElement('span');
+    const closeButton = document.createElement('a');
+    closeButton.addEventListener('click', () =>{
+      popupContainer.remove();
+    })
     popup.appendChild(closeButton);
 
     const img = document.createElement('img');
     img.setAttribute('src', popupObj.img);
+
+    const info = document.createElement('div');
+    info.classList.add('flexrow')
+    const txtinfo = document.createElement('div');
+    txtinfo.classList.add('flexcolumn')
+
+    const title = document.createElement('h2');
+    title.innerHTML = popupObj.title;
+
+    const tags = document.createElement('ul');
+    tags.classList.add('languages');
+    popupObj.tags.map((t) => {
+      const tag = document.createElement('li');
+      tag.innerHTML = t;
+      tags.appendChild(tag);
+    });
 
     const seeProjectButton = document.createElement('a');
     seeProjectButton.classList.add('button');
@@ -57,27 +76,21 @@ buttonArr.map((el) => {
     seeSourceButton.classList.add('see-source-button');
     seeSourceButton.innerHTML = 'See Source';
 
-    const title = document.createElement('h2');
-    title.innerHTML = popupObj.title;
-    const tags = document.createElement('ul');
-    popupObj.tags.map((t) => {
-      const tag = document.createElement('li');
-      tag.innerHTML = t;
-      tags.appendChild(tag);
-    });
-
     const paragraph = document.createElement('p');
     paragraph.innerHTML = popupObj.paragraph;
 
     popup.appendChild(img);
-    popup.appendChild(title);
-    popup.appendChild(seeProjectButton);
-    popup.appendChild(seeSourceButton);
-    popup.appendChild(tags);
+
+    txtinfo.appendChild(title);
+    txtinfo.appendChild(tags);
+
+    info.appendChild(txtinfo);
+    info.appendChild(seeProjectButton);
+    info.appendChild(seeSourceButton);
+
+    popup.appendChild(info);
     popup.appendChild(paragraph);
 
     document.querySelector('body').appendChild(popupContainer);
-
-    //console.log(popup);
   });
 });

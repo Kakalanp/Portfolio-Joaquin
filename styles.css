@@ -9,6 +9,16 @@ body {
   color: #172b4d;
 }
 
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
 nav .menu-container {
   display: flex;
   justify-content: space-around;
@@ -358,50 +368,71 @@ form {
   }
 }
 
-div.popup-container {
+.popup-container {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 40px);
   height: 100%;
-  padding-top: 2%;
+  padding: 20px;
   background-color: silver;
 }
 
-div.popup {
-  background-color: #fff;
-  padding: 10px;
-  width: 65%;
-  margin: auto;
+.popup {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 15px 15px;
+  background-color: white;
+  max-width: fit-content;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.popup img {
+  max-height: 430px;
+}
+
+.popup h2 {
+}
+
+.popup a {
+  background-image: url('Images/close.svg');
+  height: 40px;
+  width: 40px;
+  align-self: end;
+}
+
+.popup .flexcolumn {
+  max-width: 50%;
+}
+.popup .flexrow {
   justify-content: center;
 }
 
-div.popup img {
-  max-height: 480px;
+.popup ul {
+  margin: 0;
 }
 
-div.popup h2 {
-  flex-basis: 60%;
-  text-align: left;
-}
-
-div.popup a {
-  flex-basis: 15%;
-  margin: 5px;
-  height: 30px;
-  text-align: left;
-  font-size: 14px;
+.popup a.see-project-button {
+  background-image: url('Images/seeproject-icon.png');
   background-repeat: no-repeat;
-  background-position: right 10px top 20px;
+  align-self: center;
+  width: 130px;
+  height: fit-content;
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position-y: center;
+  background-position-x: right;
 }
 
-div.popup a.see-project-button {
-  background-image: url('images/seeproject-icon.png');
-}
-
-div.popup a.see-source-button {
-  background-image: url('images/github-icon.png');
+.popup a.see-source-button {
+  background-image: url('Images/github-icon.png');
+  background-repeat: no-repeat;
+  align-self: center;
+  width: 130px;
+  height: fit-content;
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position-y: center;
+  background-position-x: right;
 }
