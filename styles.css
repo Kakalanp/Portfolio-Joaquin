@@ -9,6 +9,20 @@ body {
   color: #172b4d;
 }
 
+img {
+  max-width: 100%;
+}
+
+.flexcolumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.flexrow {
+  display: flex;
+  flex-direction: row;
+}
+
 nav .menu-container {
   display: flex;
   justify-content: space-around;
@@ -18,6 +32,19 @@ nav .menu-container {
   letter-spacing: 0%;
   text-align: center;
   gap: 50px;
+}
+
+.close-button {
+  background-image: url("Images/close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+}
+
+.popup .close-button {
+  position: fixed;
 }
 
 @media screen and (max-width: 991px) {
@@ -34,15 +61,6 @@ nav .menu-container {
     padding: 20px 10px 20px 20px;
     justify-content: left;
     font-size: 5vw;
-  }
-
-  .close-button {
-    background-image: url("Images/close.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    align-self: flex-end;
   }
 }
 
@@ -138,7 +156,7 @@ h1 {
 }
 
 .screenshot {
-  min-height: 120px;
+  height: 150px;
   max-width: 100%;
   flex-grow: 0;
 }
@@ -259,6 +277,62 @@ form {
   padding-top: 10%;
 }
 
+.popup-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 40px);
+  height: 100%;
+  padding: 20px;
+  background-color: rgb(192 192 192 / 90%);
+}
+
+.popup {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  background-color: white;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.popup img {
+  max-height: 430px;
+}
+
+.popup .flexrow {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.popup ul {
+  margin: 0;
+}
+
+.see-live-button {
+  background-image: url("Images/seeproject-icon.png");
+  background-repeat: no-repeat;
+  align-self: baseline;
+  width: calc(50% - 29px);
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position: 93% center;
+  position: static;
+  order: 3;
+}
+
+.see-source-button {
+  background-image: url("Images/github-icon.png");
+  background-repeat: no-repeat;
+  align-self: baseline;
+  width: calc(50% - 29px);
+  padding: 15px 20px 15px 5px;
+  margin: 2px;
+  background-position: 93% center;
+  position: static;
+  order: 4;
+}
+
 @media (min-width: 992px) {
   .flexnav {
     justify-content: space-around;
@@ -276,6 +350,10 @@ form {
 
   .menu {
     display: none;
+  }
+
+  .popup .close-button {
+    position: static;
   }
 
   .desktop {
@@ -355,5 +433,76 @@ form {
 
   .email {
     display: none;
+  }
+
+  .popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 40px);
+    height: 100%;
+    padding: 20px;
+    background-color: rgb(192 192 192 / 90%);
+  }
+
+  .popup {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: white;
+    border-radius: 5px;
+    margin: auto;
+    max-width: 650px;
+  }
+
+  .popup img {
+    max-height: 430px;
+  }
+
+  .popup h2 {
+    text-align: start;
+    margin-top: 0;
+  }
+
+  .popup a {
+    position: static;
+  }
+
+  .popup .flexcolumn {
+    max-width: calc(100% - 290px);
+  }
+
+  .popup .flexrow {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .popup .languages {
+    margin: 0;
+    justify-content: left;
+  }
+
+  .see-live-button {
+    background-image: url("Images/seeproject-icon.png");
+    background-repeat: no-repeat;
+    width: 85px;
+    padding: 12px;
+    order: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
+  }
+
+  .see-source-button {
+    background-image: url("Images/github-icon.png");
+    background-repeat: no-repeat;
+    width: 100px;
+    padding: 12px;
+    order: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
   }
 }
