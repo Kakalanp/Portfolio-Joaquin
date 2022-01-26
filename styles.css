@@ -9,6 +9,10 @@ body {
   color: #172b4d;
 }
 
+img {
+  max-width: 100%;
+}
+
 .flexcolumn {
   display: flex;
   flex-direction: column;
@@ -30,6 +34,19 @@ nav .menu-container {
   gap: 50px;
 }
 
+.close-button {
+  background-image: url("Images/close.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+}
+
+.popup .close-button {
+  position: fixed;
+}
+
 @media screen and (max-width: 991px) {
   nav .menu-container {
     position: fixed;
@@ -44,15 +61,6 @@ nav .menu-container {
     padding: 20px 10px 20px 20px;
     justify-content: left;
     font-size: 5vw;
-  }
-
-  .close-button {
-    background-image: url('Images/close.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 40px;
-    height: 40px;
-    align-self: flex-end;
   }
 }
 
@@ -86,7 +94,7 @@ li {
   flex-direction: column;
   margin: 0%;
   padding: 8%;
-  background-image: url('Images/header-illsutration-mobile.svg');
+  background-image: url("Images/header-illsutration-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
 }
@@ -148,7 +156,7 @@ h1 {
 }
 
 .screenshot {
-  min-height: 120px;
+  height: 150px;
   max-width: 100%;
   flex-grow: 0;
 }
@@ -219,7 +227,7 @@ ul .card {
 }
 
 .aboutme {
-  background-image: url('Images/background-aboutme-mobile.svg');
+  background-image: url("Images/background-aboutme-mobile.svg");
   background-repeat: no-repeat;
   background-size: 100% auto;
   padding: 25px;
@@ -276,15 +284,14 @@ form {
   width: calc(100% - 40px);
   height: 100%;
   padding: 20px;
-  background-color: rgba(192, 192, 192, 0.9);
+  background-color: rgb(192 192 192 / 90%);
 }
 
 .popup {
   display: flex;
   flex-direction: column;
-  padding: 15px 15px;
+  padding: 15px;
   background-color: white;
-  max-width: fit-content;
   border-radius: 5px;
   margin: auto;
 }
@@ -293,18 +300,7 @@ form {
   max-height: 430px;
 }
 
-.popup h2 {
-}
-
-.popup a {
-  position: fixed;
-  background-image: url('Images/close.svg');
-  height: 40px;
-  width: 40px;
-  align-self: end;
-}
-
-.popup  .flexrow {
+.popup .flexrow {
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -314,11 +310,10 @@ form {
 }
 
 .popup a.see-project-button {
-  background-image: url('Images/seeproject-icon.png');
+  background-image: url("Images/seeproject-icon.png");
   background-repeat: no-repeat;
   align-self: center;
   width: calc(50% - 29px);
-  height: fit-content;
   padding: 15px 20px 15px 5px;
   margin: 2px;
   background-position-y: center;
@@ -328,11 +323,10 @@ form {
 }
 
 .popup a.see-source-button {
-  background-image: url('Images/github-icon.png');
+  background-image: url("Images/github-icon.png");
   background-repeat: no-repeat;
   align-self: center;
   width: calc(50% - 29px);
-  height: fit-content;
   padding: 15px 20px 15px 5px;
   margin: 2px;
   background-position-y: center;
@@ -340,7 +334,6 @@ form {
   position: static;
   order: 4;
 }
-
 
 @media (min-width: 992px) {
   .flexnav {
@@ -361,12 +354,16 @@ form {
     display: none;
   }
 
+  .popup .close-button {
+    position: static;
+  }
+
   .desktop {
     display: flex;
   }
 
   .main {
-    background-image: url('Images/Header-llustration-desktop.svg');
+    background-image: url("Images/Header-llustration-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
   }
@@ -398,7 +395,7 @@ form {
   }
 
   .aboutme {
-    background-image: url('Images/illustration-about-me-desktop.svg');
+    background-image: url("Images/illustration-about-me-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
@@ -420,7 +417,7 @@ form {
   #form {
     justify-content: space-around;
     align-items: center;
-    background-image: url('Images/illustration-form-desktop.svg');
+    background-image: url("Images/illustration-form-desktop.svg");
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-position: bottom;
@@ -447,60 +444,55 @@ form {
     width: calc(100% - 40px);
     height: 100%;
     padding: 20px;
-    background-color: rgba(192, 192, 192, 0.9);
+    background-color: rgb(192 192 192 / 90%);
   }
-  
+
   .popup {
     display: flex;
     flex-direction: column;
-    padding: 15px 15px;
+    padding: 15px;
     background-color: white;
-    max-width: fit-content;
     border-radius: 5px;
     margin: auto;
   }
-  
+
   .popup img {
     max-height: 430px;
   }
-  
-  .popup h2 {
-  }
-  
+
   .popup a {
-    position: static !important;
+    position: static;
   }
-  
+
   .popup .flexcolumn {
     max-width: 50%;
   }
+
   .popup .flexrow {
     justify-content: center;
   }
-  
+
   .popup ul {
     margin: 0;
   }
-  
+
   .popup a.see-project-button {
-    background-image: url('Images/seeproject-icon.png');
+    background-image: url("Images/seeproject-icon.png");
     background-repeat: no-repeat;
     align-self: center;
     width: 130px;
-    height: fit-content;
     padding: 15px 20px 15px 5px;
     margin: 2px;
     background-position-y: center;
     background-position-x: right;
     order: 0;
   }
-  
+
   .popup a.see-source-button {
-    background-image: url('Images/github-icon.png');
+    background-image: url("Images/github-icon.png");
     background-repeat: no-repeat;
     align-self: center;
     width: 130px;
-    height: fit-content;
     padding: 15px 20px 15px 5px;
     margin: 2px;
     background-position-y: center;
