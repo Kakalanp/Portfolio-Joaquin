@@ -309,28 +309,26 @@ form {
   margin: 0;
 }
 
-.popup a.see-project-button {
+.see-live-button {
   background-image: url("Images/seeproject-icon.png");
   background-repeat: no-repeat;
-  align-self: center;
+  align-self: baseline;
   width: calc(50% - 29px);
   padding: 15px 20px 15px 5px;
   margin: 2px;
-  background-position-y: center;
-  background-position-x: right;
+  background-position: 93% center;
   position: static;
   order: 3;
 }
 
-.popup a.see-source-button {
+.see-source-button {
   background-image: url("Images/github-icon.png");
   background-repeat: no-repeat;
-  align-self: center;
+  align-self: baseline;
   width: calc(50% - 29px);
   padding: 15px 20px 15px 5px;
   margin: 2px;
-  background-position-y: center;
-  background-position-x: right;
+  background-position: 93% center;
   position: static;
   order: 4;
 }
@@ -454,10 +452,16 @@ form {
     background-color: white;
     border-radius: 5px;
     margin: auto;
+    max-width: 650px;
   }
 
   .popup img {
     max-height: 430px;
+  }
+
+  .popup h2 {
+    text-align: start;
+    margin-top: 0;
   }
 
   .popup a {
@@ -465,38 +469,40 @@ form {
   }
 
   .popup .flexcolumn {
-    max-width: 50%;
+    max-width: calc(100% - 290px);
   }
 
   .popup .flexrow {
     justify-content: center;
+    margin-top: 10px;
   }
 
-  .popup ul {
+  .popup .languages {
     margin: 0;
+    justify-content: left;
   }
 
-  .popup a.see-project-button {
+  .see-live-button {
     background-image: url("Images/seeproject-icon.png");
     background-repeat: no-repeat;
-    align-self: center;
-    width: 130px;
-    padding: 15px 20px 15px 5px;
-    margin: 2px;
-    background-position-y: center;
-    background-position-x: right;
+    width: 85px;
+    padding: 12px;
     order: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
   }
 
-  .popup a.see-source-button {
+  .see-source-button {
     background-image: url("Images/github-icon.png");
     background-repeat: no-repeat;
-    align-self: center;
-    width: 130px;
-    padding: 15px 20px 15px 5px;
-    margin: 2px;
-    background-position-y: center;
-    background-position-x: right;
+    width: 100px;
+    padding: 12px;
     order: 0;
+    text-align: left;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 20px;
   }
 }

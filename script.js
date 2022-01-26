@@ -142,8 +142,8 @@ function createpopups() {
 
       const seeProjectButton = document.createElement('a');
       seeProjectButton.classList.add('button');
-      seeProjectButton.classList.add('see-project-button');
-      seeProjectButton.innerHTML = 'See Project';
+      seeProjectButton.classList.add('see-live-button');
+      seeProjectButton.innerHTML = 'See live';
       info.appendChild(seeProjectButton);
 
       const seeSourceButton = document.createElement('a');
