@@ -173,3 +173,33 @@ document.addEventListener('DOMContentLoaded', () => {
   createworks();
   createpopups();
 });
+
+const form = document.getElementsByTagName('form')[0];
+const emailBox = document.getElementById('email');
+const submitButton = document.getElementById('submitButton');
+const pattern = /[A-Z]/g;
+
+function showError(text) {
+  const errormessage = document.querySelector('.error-message');
+  errormessage.innerHTML = text;
+  errormessage.style.opacity = 1;
+  emailBox.style.border = '3px solid red';
+
+  emailBox.addEventListener('input', () => {
+    if (emailBox.validity.valid === true && pattern.test(emailBox.value) === false) {
+      emailBox.style.border = '3px solid #36b37f';
+      errormessage.style.opacity = 0;
+    }
+  });
+}
+submitButton.addEventListener('click', () => {
+  if (emailBox.validity.valueMissing) {
+    showError('please enter your email adress.');
+  } else if (pattern.test(emailBox.value)) {
+    showError('Your email address should be written in lowercase.');
+  } else if (emailBox.validity.typeMismatch) {
+    showError('Your entered email address is not valid');
+  } else {
+    form.submit();
+  }
+});
