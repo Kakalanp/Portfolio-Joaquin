@@ -107,6 +107,7 @@ form > * {
   border-radius: 4px;
   max-height: 90px;
   width: 100%;
+  outline: none;
 }
 
 .landing-page > * {
@@ -331,6 +332,11 @@ form {
   background-position: 93% center;
   position: static;
   order: 4;
+}
+
+.error-message {
+  background-color: white;
+  opacity: 0;
 }
 
 @media (min-width: 992px) {
