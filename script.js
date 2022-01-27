@@ -175,9 +175,21 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const form = document.getElementsByTagName('form')[0];
+const nameBox = document.getElementById('name');
 const emailBox = document.getElementById('email');
+const messageBox = document.getElementById('message');
 const submitButton = document.getElementById('submitButton');
 const pattern = /[A-Z]/g;
+
+var userInfo = {name:'',email:'',message:''};
+
+nameBox.addEventListener('input',() => {
+  
+  userInfo.name = nameBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+})
+
+nameBox.value = JSON.parse(localStorage.userInfo).name;
 
 function showError(text) {
   const errormessage = document.querySelector('.error-message');
@@ -192,6 +204,9 @@ function showError(text) {
     }
   });
 }
+
+
+
 submitButton.addEventListener('click', () => {
   if (emailBox.validity.valueMissing) {
     showError('please enter your email adress.');
