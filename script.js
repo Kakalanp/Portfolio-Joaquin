@@ -175,7 +175,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const form = document.getElementsByTagName('form')[0];
-const emailBox = document.getElementsById('email');
-const nameBox = document.getElementsById('name');
-const messageBox = document.getElementsById('message');
+const emailBox = document.getElementById('email');
+const nameBox = document.getElementById('name');
+const messageBox = document.getElementById('message');
 
+const submitButton = document.getElementById('submitButton');
+
+function showError(text) {
+  const errormessage = document.querySelector(".error-message");
+  errormessage.innerHTML = text;
+  errormessage.style.opacity = 1;
+}
+submitButton.addEventListener('click', () => {
+  const pattern = /[A-Z]/g;
+  if (emailBox.validity.valueMissing) {
+    showError('please enter your email adress.');
+  } else if (pattern.test(emailBox.value)) {
+    showError('Your email address should be written in lowercase.');
+  } else if (emailBox.validity.typeMismatch) {
+    showError('Your entered email address is not valid');
+  } else {
+    alert('valid');
+  }
+});
