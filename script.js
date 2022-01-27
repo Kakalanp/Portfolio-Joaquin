@@ -173,3 +173,9 @@ document.addEventListener('DOMContentLoaded', () => {
   createworks();
   createpopups();
 });
+
+const form = document.getElementsByTagName('form')[0];
+const emailBox = document.getElementsById('email');
+const nameBox = document.getElementsById('name');
+const messageBox = document.getElementsById('message');
+
