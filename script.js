@@ -175,30 +175,70 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 const form = document.getElementsByTagName('form')[0];
+const nameBox = document.getElementById('name');
 const emailBox = document.getElementById('email');
+const messageBox = document.getElementById('message');
 const submitButton = document.getElementById('submitButton');
 const pattern = /[A-Z]/g;
+
+let userInfo = { name: '', email: '', message: '' };
+if (localStorage.userInfo !== undefined) {
+  userInfo = JSON.parse(localStorage.userInfo);
+  nameBox.value = (userInfo.name ? userInfo.name : '');
+  emailBox.value = (userInfo.email ? userInfo.email : '');
+  messageBox.value = (userInfo.message ? userInfo.message : '');
+}
+
+nameBox.addEventListener('input', () => {
+  userInfo.name = nameBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+emailBox.addEventListener('input', () => {
+  userInfo.email = emailBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
+
+messageBox.addEventListener('input', () => {
+  userInfo.message = messageBox.value;
+  localStorage.userInfo = JSON.stringify(userInfo);
+});
 
 function showError(text) {
   const errormessage = document.querySelector('.error-message');
   errormessage.innerHTML = text;
   errormessage.style.opacity = 1;
-  emailBox.style.border = '3px solid red';
+
+  nameBox.addEventListener('input', () => {
+    if (!nameBox.validity.valueMissing) {
+      nameBox.style.border = '3px solid #36b37f';
+    }
+  });
 
   emailBox.addEventListener('input', () => {
     if (emailBox.validity.valid === true && pattern.test(emailBox.value) === false) {
       emailBox.style.border = '3px solid #36b37f';
-      errormessage.style.opacity = 0;
+      if (nameBox.validity.valueMissing) {
+        errormessage.style.opacity = 0;
+      }
     }
   });
 }
+
 submitButton.addEventListener('click', () => {
   if (emailBox.validity.valueMissing) {
-    showError('please enter your email adress.');
+    showError('Please enter your email adress.');
+    emailBox.style.border = '3px solid red';
   } else if (pattern.test(emailBox.value)) {
     showError('Your email address should be written in lowercase.');
+    emailBox.style.border = '3px solid red';
   } else if (emailBox.validity.typeMismatch) {
     showError('Your entered email address is not valid');
+    emailBox.style.border = '3px solid red';
+  }
+  if (nameBox.validity.valueMissing) {
+    showError('Please enter your name');
+    nameBox.style.border = '3px solid red';
   } else {
     form.submit();
   }
