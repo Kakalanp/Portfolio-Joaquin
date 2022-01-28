@@ -14,6 +14,18 @@ img {
   max-height: 200%;
 }
 
+.error {
+  border: 3px solid red !important;
+  position: relative;
+  animation: shake 0.1s linear;
+  animation-iteration-count: 3;
+}
+
+@keyframes shake {
+  0% { left: -5px; }
+  100% { right: -5px; }
+}
+
 .flexcolumn {
   display: flex;
   flex-direction: column;
@@ -336,8 +348,10 @@ form {
 }
 
 .error-message {
-  background-color: white;
+  background-color: rgb(250 146 146);
   opacity: 0;
+  border: 5px solid red;
+  font-weight: 600;
 }
 
 @media (min-width: 992px) {
