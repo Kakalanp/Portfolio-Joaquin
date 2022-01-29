@@ -179,7 +179,7 @@ const nameBox = document.getElementById('name');
 const emailBox = document.getElementById('email');
 const messageBox = document.getElementById('message');
 const submitButton = document.getElementById('submitButton');
-const pattern = /[A-Z]/g;
+const mayuspattern = /[A-Z]/g;
 
 let userInfo = { name: '', email: '', message: '' };
 if (localStorage.userInfo !== undefined) {
@@ -222,14 +222,14 @@ function formValidation() {
 
   if (emailBox.validity.valueMissing === false){
     if (emailBox.validity.typeMismatch === false){
-      if (!pattern.test(emailBox.value)){
+      if (!mayuspattern.test(emailBox.value)){
         checks++;
         if(emailBox.classList.contains('error')){
           emailBox.classList.remove('error');
         }
         emailBox.style.border = '3px solid #36b37f';
       } else {emailBox.classList.add('error'); showError('Your email address should be written in lowercase.');}
-    } else {emailBox.classList.add('error'); showError('Your entered email address is not valid');}
+    } else {emailBox.classList.add('error'); showError('Your email address is not valid');}
   } else {emailBox.classList.add('error'); showError('Please enter your email adress.');}
 
   return checks;
