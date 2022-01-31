@@ -18,11 +18,6 @@ body {
   max-height: 200%;
 }
 
-.social img:hover {
-  transform: scale(1.2);
-  transition: 200ms linear;
-}
-
 .error {
   border: 3px solid red !important;
   position: relative;
@@ -320,6 +315,11 @@ form {
 
 .popup img {
   max-height: 430px;
+}
+
+.social img:hover {
+  transform: scale(1.2);
+  transition: 200ms linear;
 }
 
 .popup .flexrow {

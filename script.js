@@ -213,24 +213,24 @@ function showError(text) {
 function formValidation() {
   let checks = 0;
   if (nameBox.validity.valueMissing === false) {
-    checks++;
-    if(nameBox.classList.contains('error')){
+    checks += 1;
+    if (nameBox.classList.contains('error')) {
       nameBox.classList.remove('error');
     }
     nameBox.style.border = '3px solid #36b37f';
-  } else {nameBox.classList.add('error'); showError('Please enter your name'); }
+  } else { nameBox.classList.add('error'); showError('Please enter your name'); }
 
-  if (emailBox.validity.valueMissing === false){
-    if (emailBox.validity.typeMismatch === false){
-      if (!mayuspattern.test(emailBox.value)){
-        checks++;
-        if(emailBox.classList.contains('error')){
+  if (emailBox.validity.valueMissing === false) {
+    if (emailBox.validity.typeMismatch === false) {
+      if (!mayuspattern.test(emailBox.value)) {
+        checks += 1;
+        if (emailBox.classList.contains('error')) {
           emailBox.classList.remove('error');
         }
         emailBox.style.border = '3px solid #36b37f';
-      } else {emailBox.classList.add('error'); showError('Your email address should be written in lowercase.');}
-    } else {emailBox.classList.add('error'); showError('Your email address is not valid');}
-  } else {emailBox.classList.add('error'); showError('Please enter your email adress.');}
+      } else { emailBox.classList.add('error'); showError('Your email address should be written in lowercase.'); }
+    } else { emailBox.classList.add('error'); showError('Your email address is not valid'); }
+  } else { emailBox.classList.add('error'); showError('Please enter your email adress.'); }
 
   return checks;
 }
