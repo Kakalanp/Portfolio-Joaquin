@@ -13,6 +13,12 @@ body {
   color: #172b4d;
 }
 
+.tag-active {
+  font-weight: 700 !important;
+  color: white !important;
+  background-color: #00875a !important;
+}
+
 .screenshot img {
   max-width: 100%;
   max-height: 200%;
@@ -314,7 +320,10 @@ form {
 }
 
 .popup img {
+  height: 70vw;
   max-height: 430px;
+  max-width: max-content;
+  align-self: center;
 }
 
 .social img:hover {
@@ -482,10 +491,6 @@ form {
     border-radius: 5px;
     margin: auto;
     max-width: 650px;
-  }
-
-  .popup img {
-    max-height: 430px;
   }
 
   .popup h2 {

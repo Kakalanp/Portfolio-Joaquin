@@ -1,11 +1,11 @@
 const projects = [
   {
-    img: 'Images/ProjectScreenshot1.svg',
-    title: 'Multi-Post Stories Gain+Glory',
-    tags: ['HTML', 'CSS'],
-    live: '',
-    source: '',
-    paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    img: './Images/ProjectSS/Screenshot 2.png',
+    title: 'To-Do List',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    live: 'https://kakalanp.github.io/TO-DO-list/dist/',
+    source: 'https://github.com/Kakalanp/TO-DO-list',
+    paragraph: 'This is a To-do list that you can use to organize your activities of the day, it has the option to add new tasks, clear the ones completed, editing and deleting the tasks.',
   },
   {
     img: 'Images/ProjectScreenshot2.svg',
@@ -51,7 +51,7 @@ const projects = [
 
 function createworks() {
   const works = document.querySelector('div.works');
-  projects.map((el, i) => {
+  projects.forEach((el, i) => {
     const work = document.createElement('div');
     work.classList.add('card');
 
@@ -68,8 +68,6 @@ function createworks() {
     work.appendChild(div2);
 
     works.appendChild(work);
-
-    return null;
   });
 }
 
@@ -85,9 +83,8 @@ document.querySelector('.menu').addEventListener('click', () => {
   itemsArr.unshift(closeButton);
   menuContainer.innerHTML = '';
 
-  itemsArr.map((el) => {
+  itemsArr.forEach((el) => {
     menuContainer.appendChild(el);
-    return null;
   });
 
   menuContainer.addEventListener('click', () => {
@@ -99,7 +96,7 @@ document.querySelector('.menu').addEventListener('click', () => {
 function createpopups() {
   const button = document.querySelectorAll('.card .button');
   const buttonArr = Array.from(button);
-  buttonArr.map((el, i) => {
+  buttonArr.forEach((el, i) => {
     el.addEventListener('click', () => {
       const popupContainer = document.createElement('div');
       popupContainer.classList.add('popup-container');
@@ -108,6 +105,11 @@ function createpopups() {
       popup.classList.add('popup');
 
       popupContainer.appendChild(popup);
+      popupContainer.addEventListener('click', (e) => {
+        if (e.target === popupContainer) {
+          popupContainer.remove();
+        }
+      });
 
       const closeButton = document.createElement('a');
       closeButton.classList.add('close-button');
@@ -132,21 +134,25 @@ function createpopups() {
 
       const tags = document.createElement('ul');
       tags.classList.add('languages');
-      projects[i].tags.map((t) => {
+      projects[i].tags.forEach((t) => {
         const tag = document.createElement('li');
         tag.innerHTML = t;
         tags.appendChild(tag);
-        return null;
       });
       txtinfo.appendChild(tags);
+      info.appendChild(txtinfo);
 
       const seeProjectButton = document.createElement('a');
+      seeProjectButton.setAttribute('href', projects[i].live);
+      seeProjectButton.setAttribute('target', '_blank');
       seeProjectButton.classList.add('button');
       seeProjectButton.classList.add('see-live-button');
       seeProjectButton.innerHTML = 'See live';
       info.appendChild(seeProjectButton);
 
       const seeSourceButton = document.createElement('a');
+      seeSourceButton.setAttribute('href', projects[i].source);
+      seeSourceButton.setAttribute('target', '_blank');
       seeSourceButton.classList.add('button');
       seeSourceButton.classList.add('see-source-button');
       seeSourceButton.innerHTML = 'See Source';
@@ -156,16 +162,22 @@ function createpopups() {
       paragraph.innerHTML = projects[i].paragraph;
       info.appendChild(paragraph);
 
-      info.appendChild(txtinfo);
-      info.appendChild(seeProjectButton);
-      info.appendChild(seeSourceButton);
-      info.appendChild(paragraph);
-
       popup.appendChild(info);
 
       document.querySelector('body').appendChild(popupContainer);
     });
-    return null;
+  });
+
+  const allTags = document.querySelectorAll('.languages li');
+  allTags.forEach((el) => {
+    el.addEventListener('click', () => {
+      allTags.forEach((tag) => {
+        tag.classList.remove('tag-active');
+        if (tag.innerHTML === el.innerHTML) {
+          tag.classList.add('tag-active');
+        }
+      });
+    });
   });
 }
 
