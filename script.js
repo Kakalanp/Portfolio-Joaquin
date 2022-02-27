@@ -51,7 +51,7 @@ const projects = [
 
 function createworks() {
   const works = document.querySelector('div.works');
-  projects.map((el, i) => {
+  projects.forEach((el, i) => {
     const work = document.createElement('div');
     work.classList.add('card');
 
@@ -68,8 +68,6 @@ function createworks() {
     work.appendChild(div2);
 
     works.appendChild(work);
-
-    return null;
   });
 }
 
@@ -85,9 +83,8 @@ document.querySelector('.menu').addEventListener('click', () => {
   itemsArr.unshift(closeButton);
   menuContainer.innerHTML = '';
 
-  itemsArr.map((el) => {
+  itemsArr.forEach((el) => {
     menuContainer.appendChild(el);
-    return null;
   });
 
   menuContainer.addEventListener('click', () => {
@@ -137,11 +134,10 @@ function createpopups() {
 
       const tags = document.createElement('ul');
       tags.classList.add('languages');
-      projects[i].tags.map((t) => {
+      projects[i].tags.forEach((t) => {
         const tag = document.createElement('li');
         tag.innerHTML = t;
         tags.appendChild(tag);
-        return null;
       });
       txtinfo.appendChild(tags);
       info.appendChild(txtinfo);
