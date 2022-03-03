@@ -1,6 +1,6 @@
 const projects = [
   {
-    img: './Images/ProjectSS/Screenshot 2.png',
+    img: './Images/ProjectSS/To-do list.png',
     title: 'To-Do List',
     tags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
     live: 'https://kakalanp.github.io/TO-DO-list/dist/',
@@ -8,12 +8,12 @@ const projects = [
     paragraph: 'This is a To-do list that you can use to organize your activities of the day, it has the option to add new tasks, clear the ones completed, editing and deleting the tasks.',
   },
   {
-    img: 'Images/ProjectScreenshot2.svg',
-    title: 'Multi-Post Stories Gain+Glory',
-    tags: ['HTML', 'CSS', 'JavaScript'],
-    live: '',
-    source: '',
-    paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    img: './Images/ProjectSS/tip-calculator.jpeg',
+    title: 'Tip Calculator',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    live: 'https://kakalanp.github.io/Tip-calculator/dist',
+    source: 'https://github.com/Kakalanp/Tip-calculator',
+    paragraph: 'This is a calculator for paying a bill; using HTML, CSS, JavaScript, and Webpack; you can divide a bill and a percental tip with many people.',
   },
   {
     img: 'Images/placeholder.png',
