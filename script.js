@@ -8,7 +8,7 @@ const projects = [
     paragraph: 'This is a To-do list that you can use to organize your activities of the day, it has the option to add new tasks, clear the ones completed, editing and deleting the tasks.',
   },
   {
-    img: './Images/ProjectSS/tip-calculator.jpeg',
+    img: './Images/ProjectSS/tip-calculator.png',
     title: 'Tip Calculator',
     tags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
     live: 'https://kakalanp.github.io/Tip-calculator/dist',
@@ -16,12 +16,12 @@ const projects = [
     paragraph: 'This is a calculator for paying a bill; using HTML, CSS, JavaScript, and Webpack; you can divide a bill and a percental tip with many people.',
   },
   {
-    img: 'Images/placeholder.png',
-    title: 'Multi-Post Stories Gain+Glory',
-    tags: ['HTML', 'CSS'],
-    live: '',
-    source: '',
-    paragraph: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+    img: './Images/ProjectSS/LeaderBoard.png',
+    title: 'Leaderboard',
+    tags: ['HTML', 'CSS', 'JavaScript', 'Webpack'],
+    live: 'https://kakalanp.github.io/Leaderboard/dist/',
+    source: 'https://github.com/Kakalanp/Leaderboard',
+    paragraph: "This is a project that let's you see a list of scores using an API, using HTML and CSS to look so stylish and JavaScript, so you can add your own and it will be saved on the list forever!",
   },
   {
     img: 'Images/placeholder.png',
@@ -170,7 +170,7 @@ function createpopups() {
 
   const allTags = document.querySelectorAll('.languages li');
   allTags.forEach((el) => {
-    el.addEventListener('click', () => {
+    el.addEventListener('mouseover', () => {
       allTags.forEach((tag) => {
         tag.classList.remove('tag-active');
         if (tag.innerHTML === el.innerHTML) {
