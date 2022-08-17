@@ -1,5 +1,7 @@
-html {
-  scroll-behavior: smooth;
+@supports (scroll-behavior: smooth) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {
@@ -230,7 +232,9 @@ h1 {
 }
 
 .button:hover {
-  box-shadow: 0 8px 16px 0 #36b37f3d;
+  box-shadow: 0 8px 16px 10px #36b37f3d;
+  background-color: #006e4a;
+  cursor: pointer;
 }
 
 .button:active {
